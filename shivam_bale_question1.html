@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+    
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Nabler DPI Assessment</title>
+  </head>
+  <body>
+    <div class="home-page">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h3>GET IN TOUCH</h3>
+            <h1>Send us a message</h1>
+            <div class="input-boxes">
+              <form class="form" action="">
+                <div class="flex-inputs">
+                  <div class="inputBox fstn ">
+                    <input type="text" placeholder="Your Name* " name="name" class=""/>
+                    <div class="error-hint hidden">Your name is required</div>
+                  </div>
+
+                  <div class="inputBox lstn ">
+                    <input type="email" placeholder="Your Email*" name="email" class="" onkeydown="emailvalidate()" />
+                    <div class="error-hint hidden">This field is required</div>
+                    <span id="text" class=""></span>
+                  </div>
+                </div>
+
+                <div class="inputBox ">
+                  <input type="text" placeholder="Company Name* " name="company" class=""/>
+                  <div class="error-hint hidden">make sure mention your company</div>
+                </div>
+
+                <div class="inputBox">
+                  <textarea type="text" placeholder="Your Message*" maxlength="20" data-max-chars="20" class="count-chars"></textarea>
+                  <div class="error-hint hidden">Please add a message for us</div>
+                  <span class="character-count"></span>
+                </div>
+                 
+                <div class="bind">
+                  <input type="checkbox"  name="emailAccept" value="Accept">
+                  <label for="Accept"> Yes, I would like to recieve communication by call/email about Nabler's services 
+                 </label>
+                </div>
+               
+
+
+                <div class="inputBox submit-btn">
+                  <input type="submit" placeholder="Get in touch !" />
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="align-center">
+              <p>
+                We've driven online revenues of over
+                <strong>$2 billion</strong> for our clients. Ready to know how
+                we can help you?
+              </p>
+              <a href="mailto:info@nabler.com">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                info@nabler.com
+              </a>
+              <a href="tel:+918049372900" class="tel">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                +91 80 4937 2900</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="Thank-you ">
+      <div class="container  box">
+        <h1>Thank You ! We will contact You soon</h1>
+      </div> 
+    </div> -->
+   
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript" src="./index.js"></script>
+  </body>
+</html>

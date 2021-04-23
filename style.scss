@@ -1,0 +1,214 @@
+$body-font: "Barlow", sans-serif;
+// $body-color :
+$color-red: #ec1c24;
+$color-black: #212d31;
+$color-light-black: #343a40;
+$background-color: #eee;
+
+//media-queries
+@mixin breakpoint($size) {
+  @media only screen and (max-width: $size + px) {
+    @content;
+  }
+}
+
+html {
+  font-size: 17px;
+}
+@media (max-width: 900px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media (max-width: 400px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+h1 {
+  font-family: $body-font;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: $body-font;
+  font-size: 2rem;
+}
+
+h3 {
+  font-family: $body-font;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+input {
+  box-sizing: border-box;
+}
+textarea {
+  box-sizing: border-box;
+}
+.container{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+span{
+  display: block;
+}
+.character-count{
+  font-size: 1rem;
+  color: $color-red;
+  padding-top: 2px;
+}
+.home-page {
+  background-color: $background-color;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+
+  h1 {
+    position: relative;
+    &::after {
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      content: "";
+      height: 2px;
+      width: 70px;
+      background-color: $color-red;
+    }
+  }
+  .input-boxes{
+    margin-top: 40px;
+  }
+  .fstn, .lstn {
+    width: 50% !important;
+  }
+  .lstn {
+    padding-left: 15px;
+  }
+  .flex-inputs{
+    display: flex;
+  }
+  textarea{
+    height: 120px;
+  }
+  .invalid{
+    border: 1px solid $color-red !important;
+  }
+
+  .inputBox {
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+    .error-hint{
+      color: $color-red;
+      // margin: 10px 0px;
+      font-size: 1rem;
+    }
+   
+  }
+  #text{
+    display: block;
+    color: #000;
+    font-weight: 300;
+    font-size: 1rem;
+  }
+  .bind{
+    @include breakpoint(991){
+      display: flex;
+      align-items: center;
+    }
+    label{
+      margin-left: 10px;
+    }
+  }
+  .inputBox input,
+  .inputBox textarea {
+    width: 100%;
+    border: 1px solid $color-light-black;
+    padding: 10px;
+    color: #111;
+    outline: none;
+    font-size: 16px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+  .inputBox input[type="submit"] {
+    font-size: 1em;
+    color: $color-red;
+    background: transparent;
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    max-width: 100px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    border-radius: 35px;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    -ms-border-radius: 35px;
+    -o-border-radius: 35px;
+    border: 1px solid $color-red;
+}
+.submit-btn{
+  margin-top: 20px;
+}
+  .inputBox input[type="submit"]:hover {
+    background-color: $color-red;
+    color: $background-color;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    -o-transition: 0.5s all;
+  }
+
+  .align-center{
+    padding: 170px 0px;
+     @include breakpoint(991){
+       padding: 0px ; 
+       margin-top: 30px;
+     }
+    p{
+      font-size: 1.3rem;
+      color: $color-light-black;
+      font-weight: 400;
+    }
+    a{
+      font-size: 1.5rem;
+      text-decoration: none;
+      color: $color-black;
+      display: block;
+      i{
+        color: $color-black;
+      }
+    }
+    .tel{
+      color: $color-red;
+    }
+  }
+ 
+}
+
+// .Thank-you{
+//   display: flex;
+//   min-height: 100vh;
+//   justify-content: center;
+//   align-items: center;
+//   background-color: rgba($color: #000000, $alpha: 0.2);
+//   h1{
+//     color: $color-red;
+//     text-align: center;
+//   }
+// }
